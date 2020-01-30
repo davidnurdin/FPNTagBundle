@@ -10,6 +10,7 @@
 
 namespace FPN\TagBundle\Entity;
 
+use Doctrine\ORM\EntityManagerInterface;
 use DoctrineExtensions\Taggable\TagManager as BaseTagManager;
 use Doctrine\ORM\EntityManager;
 use FPN\TagBundle\Util\SlugifierInterface;
@@ -21,7 +22,7 @@ class TagManager extends BaseTagManager
     /**
      * @see DoctrineExtensions\Taggable\TagManager::__construct()
      */
-    public function __construct(EntityManager $em, $tagClass = null, $taggingClass = null, SlugifierInterface $slugifier)
+    public function __construct(EntityManagerInterface $em, $tagClass = null, $taggingClass = null, SlugifierInterface $slugifier)
     {
         parent::__construct($em, $tagClass, $taggingClass);
         $this->slugifier = $slugifier;
