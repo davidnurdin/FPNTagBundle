@@ -10,7 +10,7 @@
 
 namespace FPN\TagBundle\Entity;
 
-use DoctrineExtensions\Taggable\Entity\Tag as BaseTag;
+use FPN\TagBundle\Entity\Taggable\BaseTag;
 
 class Tag extends BaseTag
 {

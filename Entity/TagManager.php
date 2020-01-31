@@ -11,8 +11,7 @@
 namespace FPN\TagBundle\Entity;
 
 use Doctrine\ORM\EntityManagerInterface;
-use DoctrineExtensions\Taggable\TagManager as BaseTagManager;
-use Doctrine\ORM\EntityManager;
+use FPN\TagBundle\Taggable\TagManager as BaseTagManager;
 use FPN\TagBundle\Util\SlugifierInterface;
 
 class TagManager extends BaseTagManager
