@@ -1,6 +1,6 @@
 <?php
 
-namespace FPN\TagBundle\Entity\Taggable;
+namespace FPN\TagBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\AbstractQuery;

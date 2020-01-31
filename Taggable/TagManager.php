@@ -13,8 +13,8 @@ namespace FPN\TagBundle\Taggable;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Query\Expr;
 use Doctrine\Commons\Collections\Collection;
-use FPN\TagBundle\Entity\Taggable\BaseTag;
-use FPN\TagBundle\Entity\Taggable\BaseTagging;
+use FPN\TagBundle\Entity\Tag;
+use FPN\TagBundle\Entity\Tagging;
 
 /**
  * TagManager.
@@ -31,8 +31,8 @@ class TagManager
     {
         $this->em = $em;
 
-        $this->tagClass = $tagClass ?: 'FPN\TagBundle\Entity\Taggable\BaseTag';
-        $this->taggingClass = $taggingClass ?: 'FPN\TagBundle\Entity\Taggable\BaseTagging';
+        $this->tagClass = $tagClass ?: 'FPN\TagBundle\Entity\Tag';
+        $this->taggingClass = $taggingClass ?: 'FPN\TagBundle\Entity\Tagging';
     }
 
     /**

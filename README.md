@@ -2,10 +2,7 @@ FPNTagBundle
 ============
 
 This bundle adds tagging to your Symfony project, with the ability to associate
-tags with any number of different entities. This bundle integrates the
-[DoctrineExtensions-Taggable](https://github.com/FabienPennequin/DoctrineExtensions-Taggable)
-library, which handles most of the hard work.
-
+tags with any number of different entities.
 **Navigation**
 
 1. [Installation](#installation)
@@ -224,7 +221,7 @@ is simple: just add the `Taggable` interface and add the necessary 3 methods:
 
 namespace Acme\BlogBundle\Entity;
 
-use DoctrineExtensions\Taggable\Taggable;
+use Taggable;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -263,8 +260,7 @@ the tags that are associated with your entity.
 ## Using Tags
 
 The bundle works by using a "tag manager", which is responsible for creating
-tags and adding them to your entities. For some really good usage instructions,
-see [Using TagManager](https://github.com/FabienPennequin/DoctrineExtensions-Taggable).
+tags and adding them to your entities.
 
 Basically, the idea is this. Instead of setting tags directly on your entity
 (e.g. Post), you'll use the tag manager to set the tags for you. Let's see
