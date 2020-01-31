@@ -41,7 +41,7 @@ class TagManager
      * @param Tag       $tag        Tag object
      * @param Taggable  $resource   Taggable resource
      */
-    public function addTag(BaseTag $tag, Taggable $resource)
+    public function addTag(Tag $tag, Taggable $resource)
     {
         $resource->getTags()->add($tag);
     }
@@ -68,7 +68,7 @@ class TagManager
      * @param Taggable  $resource   Taggable resource
      * @return Boolean
      */
-    public function removeTag(BaseTag $tag, Taggable $resource)
+    public function removeTag(Tag $tag, Taggable $resource)
     {
         return $resource->getTags()->removeElement($tag);
     }
